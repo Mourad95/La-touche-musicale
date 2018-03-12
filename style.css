@@ -1,18 +1,134 @@
 * { box-sizing:border-box; }
 
-body{ margin:0; background:rgb(255, 255, 255); }
-ul {
-	height:18.875em; width:34em;
-    margin:5em auto; padding:3em 0 0 3em; position:relative; 
-    border:1px solid #160801; border-radius:1em; 
-    background:-webkit-gradient(linear, right bottom, left top, color-stop(0%,rgba(0,0,0,0.3)), color-stop(100%,rgba(0,0,0,0))), url('https://f.cl.ly/items/2q1f3t0C3R1b0g081w3n/vwood.png');
-    box-shadow:0 0 50px rgba(0,0,0,0.5) inset, 0 1px rgba(212,152,125,0.2) inset,0 5px 15px rgba(0,0,0,0.5); 
+/**** General ****/
+
+body{ 
+	margin:0; 
+	background: #bbb; 
+}
+
+a{
+	text-decoration: none;
+}
+
+/**** Header: logo + account + menu ****/
+
+header{
+	padding: 1% 0 1% 3%;
+	background-color: #000;
+	color: #999;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 16px;
+	display: flex; /* Pour aligner le logo, 'Mon compte' et le burger menu */
+}
+
+header a {
+	color: #999;
+	display: flex; 
+}
+
+#logo{
+	height: 25%;
+	width: 25%; 
+}
+
+	/**** Menu flex ****/
+
+nav{
+	padding: 3% 0 0 0;
+}
+
+#left_align ul{
+	margin: 0px;
+	padding: 0px;
+	background: #000;
+}
+
+#left_align #menu_flex{
+	display: flex;
+}
+
+#menu_flex li{
+	background: #000;
+}
+
+#menu_flex a{
+	width: 125px;
+	text-align: right;
+}
+
+#menu_flex a:hover{
+	color: #777;
+}
+    /**** Burger menu ****/
+
+#burger-menu{
+	margin: -1% 0 0 0;
+	height: 20%;
+	width: 20%;
+}
+
+#burger-menu:hover{
+}
+
+#hide-menu{
+	display: none;
+}
+
+#show-menu{
+}
+
+/**** SECTION 1 ****/
+/**** File import ****/
+
+#div_import{
+	margin: 15px 0 15px 550px;
+	height: 50px;
+}
+
+#button_import{
+	height: 45px;
+	align-items: center;
+}
+
+/**** MapMidi ****/
+
+#MapMidi{
+	height: 30%;
+}
+
+#learning_map{
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+}
+
+/**** Clavier ****/
+
+#ClavierPiano{
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+#ClavierPiano ul {
+	height:16em; 
+	width:14em;
+	margin:0 0 0 +0.5em; 
+	padding:0 0 0 0; 
+	position:relative;
     display: flex;
-    }
-li { margin:0; padding:0; list-style:none; position:relative; }
+	}
+	
+li { 
+	margin:0 0 0 0; 
+	padding:0 16px 0 0; 
+	list-style:none;
+	position:relative; 
+	background: rgb(255, 255, 255)
+}
 
 ul .white {
-	height:16em; width:4em; z-index:1;
+	height:12em; width:2em; z-index:1;
 	border-left:1px solid #bbb;
 	border-bottom:1px solid #bbb;
 	border-radius:0 0 5px 5px;
@@ -28,8 +144,10 @@ ul .white:active {
 	background: linear-gradient(top, #fff 0%,#e9e9e9 100%);
 }
 
-.black {
-	height:8em; width:2em; margin:0 0 0 -1em; z-index:2;
+ul .black {
+	height:7em; width:1em; 
+	margin:0 0 0 -1em; 
+	z-index:2;
 	border:1px solid #000;
 	border-radius:0 0 3px 3px;
 	box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset, 0 -5px 2px 3px rgba(0,0,0,0.6) inset, 0 2px 4px rgba(0,0,0,0.5);
@@ -41,8 +159,28 @@ ul .white:active {
 	background:linear-gradient(left, #444 0%,#222 100%);
 }
 
-.a,.g,.d,.c,.e,.b { margin:0 0 0 -1em;  }
+.a,.g,.d,.c,.e,.f,.b { margin:0 0 0 -0.5em;  }
 
-ul li:first-child { border-radius:5px 0 5px 5px; }
-ul li:last-child { border-radius:0 5px 5px 5px; }
+/*ul li:first-child { border-radius:5px 0 5px 5px; }
+ul li:last-child { border-radius:0 5px 5px 5px; }*/
 
+/**** Footer: credits + contacts ****/
+
+footer{
+	padding: 1% 0 1% 15%;
+	background-color: #000;
+	color: #999;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: 16px;
+}
+
+footer li{
+	background: #000;
+}
+footer a{
+	color: #999;
+}
+
+footer a:hover{
+	color: #777;
+}

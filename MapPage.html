@@ -11,28 +11,33 @@
 <body>
     <header> <!-- header -->
     <div>
-        <img /> <!-- logo -->
-        <ul>
-            <li>Mon compte</li>
-            <li>Menu</li>
-            <ul>
-                <li>Importer fichier</li>
-                <li>Se connecter</li>
-                <li>Nous rejoindre</li>
-            </ul>
+        <a href=""><img id="logo" src="img/logo.png" /></a> <!-- logo -->
+    </div>
+    <nav id="left_align" role="navigation">
+        <ul id="menu_flex">
+            <li><a href="#">Mon compte</a></li>
+            <li><a href=""><img id="burger-menu" src="img/menu.png" /></a>
+                <ul id="hide-menu">
+                    <li><a href="">Accueil</a></li>
+                    <li><a href="">Importer fichier</a></li>
+                    <li><a href="">Se connecter</a></li>
+                    <li><a href="">Nous rejoindre</a></li>
+                </ul>
+            </li>
         </ul>
-    </div>
-     <div>
-            <!-- bouton + champ recherche -->
-    </div>
+    </nav>
     </header> 
     
     <section id="MapMidi"> <!-- Map MIDI -->
-        <div><!-- defilment MIDI JS--></div>
+        <div id="div_import"><!-- bouton + champ recherche -->
+            <button id="button_import" disabled="disabled">Importer un fichier depuis l'ordinateur</button>
+       </div>
+        <div><!-- defilment MIDI JS-->
+            <img id="learning_map" src="img/fakeMap.PNG"/>
+        </div>
     </section>
     
     <section id="ClavierPiano"> <!-- Clavier piano -->
-        <span>
         <ul id="1" class="octave">
                 <li class="white c"></li>
                 <li class="black cs"></li>
@@ -145,13 +150,14 @@
                 <li class="black as"></li>
                 <li class="white b"></li>
         </ul>
-    </span>
     </section>
     
     <footer> <!-- Footer -->
         <ul>
-            <li>contact</li>
-            <li></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Crédits</a></li>
+            <br/>
+            <li>© 2016 La touche musicale</li>
         </ul>
     </footer>
 </body>

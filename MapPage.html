@@ -4,35 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Mina' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <title>La Touche Musicale - A vous de jouer !</title>
 </head>
 
 <body>
     <header> <!-- header -->
-    <div>
-        <a href=""><img id="logo" src="img/logo.png" /></a> <!-- logo -->
-    </div>
-    <nav id="left_align" role="navigation">
-        <ul id="menu_flex">
-            <li><a href="#">Mon compte</a></li>
-                <ul class="hide-menu">
-                    <li><a href="#">Se connecter</a></li>
-                    <li><a href="#">Nous rejoindre</a></li>
-                </ul>
-            <li><a href="#"><img id="burger-menu" src="img/menu.png" /></a>
-                <ul class="hide-menu">
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Importer fichier</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+        <div>
+            <a href=""><img id="logo" src="img/logo.png" /></a> <!-- logo -->
+        </div>
+        <nav id="left_align" role="navigation">
+            <ul id="menu_flex">
+                <li><a href="#">Mon compte</a></li>
+                    <ul class="hide-menu">
+                        <li><a href="#">Se connecter</a></li>
+                        <li><a href="#">Nous rejoindre</a></li>
+                    </ul>
+                <li><a href="#"><img id="burger-menu" src="img/menu.png" /></a>
+                    <ul class="hide-menu">
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Importer fichier</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header> 
     
     <section id="MapMidi"> <!-- Map MIDI -->
         <div id="div_import"><!-- bouton + champ recherche -->
-            <button id="button_import" disabled="disabled">Importer un fichier depuis l'ordinateur</button>
+            <form>
+                <label for="button_import" id="customized_button">
+                    <i class="fas fa-upload"></i>
+                    <span id="label_span">Select an audio file</span>
+                </label>
+                <input id="button_import" type="file" multiple="false"/>
+            </form>
        </div>
         <div><!-- defilment MIDI JS-->
             <img id="learning_map" src="img/fakeMap.PNG"/>
@@ -41,9 +50,9 @@
     
     <section id="ClavierPiano"> <!-- Clavier piano -->
         <ul id="1" class="octave">
-                <li id="1c" class="white c"></li>
-                <li id="1cs" class="black cs"></li>
-                <li id="1d" class="white d"></li>
+                <li class="white c"></li>
+                <li class="black cs"></li>
+                <li class="white d"></li>
                 <li class="black ds"></li>
                 <li class="white e"></li>
                 <li class="white f"></li>
@@ -162,5 +171,6 @@
             <li>© 2016 La touche musicale</li>
         </ul>
     </footer>
+    <script src="features.js"></script>
 </body>
 </html>

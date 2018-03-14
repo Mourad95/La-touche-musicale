@@ -1,4 +1,5 @@
-* { box-sizing:border-box; }
+* { box-sizing:border-box; padding: 0; }
+
 /* Creuser la question des ::after ::before */
 /**** General ****/
 
@@ -16,10 +17,10 @@ a{
 header{
 	position: relative;
 	margin: 0 0 0 0;
-	padding: 1% 0 1% 3%;
+	padding: 1% 0% 1% 3%;
 	background-color: #000;
 	color: #999;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-family: 'MINA', 'Arial';
 	font-size: 16px;
 	display: flex; /* Pour aligner le logo, 'Mon compte' et le burger menu */
 }
@@ -36,11 +37,6 @@ header a{
 
 	/**** Menu flex ****/
 
-nav{
-	margin: 0 0 0 0;
-	padding: 3% 0 0 0;
-}
-
 #left_align{
 	margin: 0;
 }
@@ -52,7 +48,8 @@ nav{
 }
 
 #left_align #menu_flex{
-	margin: 0 0 0 0;
+	margin: 30px 0 0 0;
+	float: right;
 	display: flex;
 }
 
@@ -77,28 +74,42 @@ nav{
 	width: 20%;
 }
 
-#burger-menu:hover{
-}
-
 .hide-menu{
 	margin: 0;
 	display: none;
-}
-
-#show-menu{
 }
 
 /**** SECTION 1 ****/
 /**** File import ****/
 
 #div_import{
-	margin: 15px 0 15px 550px;
-	height: 50px;
+	margin: 5% 0 5% 43%;
+	height: 50%;
+	width: 50%;
+}
+
+#customized_button{
+	padding: 10px;
+	background-color: #ccc;
+	font-family: 'Mina', 'Arial';
+	transition: 0.3s;
+}
+
+#customized_button:hover{
+	background-color: #e9e9e9;
+	cursor: pointer;
 }
 
 #button_import{
-	height: 45px;
-	align-items: center;
+	display: none;
+}
+
+#customized_button a{
+	color: #444;
+}
+
+.fas{
+	margin-right: 9%;
 }
 
 /**** MapMidi ****/
@@ -123,22 +134,22 @@ nav{
 #ClavierPiano ul {
 	height:16em; 
 	width:14em;
-	margin:0 0 0 +0.5em; 
+	margin:0 0 0 0; 
 	padding:0 0 0 0; 
 	position:relative;
     display: flex;
 	}
 	
 li { 
-	margin:0 0 0 0; 
-	padding:0 16px 0 0; 
+	margin:0 0 0 0;
+	padding:0 0 0 0; 
 	list-style:none;
 	position:relative; 
-	background: rgb(255, 255, 255)
+	background: rgb(255, 255, 255);
 }
 
 ul .white {
-	height:12em; width:2em; z-index:1;
+	height:11em; width:1.9em; z-index:1;
 	border-left:1px solid #bbb;
 	border-bottom:1px solid #bbb;
 	border-radius:0 0 5px 5px;
@@ -147,9 +158,6 @@ ul .white {
 }
 
 ul .white:active {
-	border-top:1px solid #777;
-	border-left:1px solid #999;
-	border-bottom:1px solid #999;
 	box-shadow:2px 0 3px rgba(0,0,0,0.1) inset, -5px 5px 20px rgba(0,0,0,0.2) inset,0 0 3px rgba(0,0,0,0.2);
 	background: linear-gradient(top, #fff 0%,#e9e9e9 100%);
 }
@@ -171,8 +179,8 @@ ul .black {
 
 .a,.g,.d,.c,.e,.f,.b { margin:0 0 0 -0.5em;  }
 
-/*ul li:first-child { border-radius:5px 0 5px 5px; }
-ul li:last-child { border-radius:0 5px 5px 5px; }*/
+ul li:first-child { border-radius:5px 0 5px 5px; }
+ul li:last-child { border-radius:0 5px 5px 5px; }
 
 /**** Footer: credits + contacts ****/
 

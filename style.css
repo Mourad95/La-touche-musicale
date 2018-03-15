@@ -5,7 +5,7 @@
 
 body{ 
 	margin:0; 
-	background: #bbb; 
+	background-color: #e9e9e9;
 }
 
 a{
@@ -16,12 +16,12 @@ a{
 
 header{
 	position: relative;
-	margin: 0 0 0 0;
 	padding: 1% 0% 1% 3%;
-	background-color: #000;
+	background-color: #e9e9e9;
 	color: #999;
 	font-family: 'MINA', 'Arial';
 	font-size: 16px;
+	height: 200px;
 	display: flex; /* Pour aligner le logo, 'Mon compte' et le burger menu */
 }
 
@@ -31,47 +31,97 @@ header a{
 }
 
 #logo{
+	position: absolute;
 	height: 25%;
 	width: 25%;
+	left: 5%;
+	top: 10%;
+}
+#logo a {
+	cursor: pointer;
+}
+
+#logo a img{
+	height: 55%;
+	width: 55%;
 }
 
 	/**** Menu flex ****/
 
-#left_align{
-	margin: 0;
+#pre_menu{
+	position: absolute;
+	width: 15%;
+	right: 10%;
+	top: 18%;
 }
 
-#left_align ul{
-	margin: 0 0 0 0;
-	padding: 0;
-	background: #000;
-}
-
-#left_align #menu_flex{
-	margin: 30px 0 0 0;
-	float: right;
+#pre_menu ul{
 	display: flex;
 }
 
-#menu_flex li{
-	background: #000;
+#pre_menu ul li{
+	background-color: #e9e9e9;
+	margin-right: 15%;
 }
 
-#menu_flex a{
-	margin: 0;
-	width: 125px;
-	text-align: right;
+#pre_menu a:hover{
+	color: #555;
 }
 
-#menu_flex a:hover{
-	color: #777;
-}
     /**** Burger menu ****/
 
-#burger-menu{
-	margin: -1% 0 0 0;
-	height: 20%;
+.menu_burger{
+	position: fixed;
+	margin-top: -1%;
+	right: 0;
 	width: 20%;
+	height: 100%;
+	background-color: #222;
+	transition: transform .6s ease-in-out;
+	--webkit-transition: transform .6s ease-in-out;
+	transform: translateX(100%);
+	--webkit-transform: translateX(100%);
+}
+
+.menu_burger.isOpen{
+	transform: translateX(0%);
+	--webkit-transform: translateX(0%);
+}
+
+#menu_burger ul {
+	margin: 0 20% 0 20%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	--webkit-transform: translateY(-50%);
+}
+
+#menu_burger ul li {
+	margin-bottom: 20%;
+	background-color: #222;
+}
+
+#menu_burger ul li a:hover {
+	color: #ccc;
+	text-transform: uppercase;
+}
+
+#burger_menu_logo{
+	margin: -1% 0 0 0;
+}
+
+.burger_menu_logo.angle{
+	image-orientation: 45grad;
+	image-orientation: 45deg;
+}
+
+#burger_menu_logo a img{
+	position: absolute;
+	top: 25%;
+	right: 7%;
+	height: 15%;
+	width: 2%;
+	z-index: 20;
 }
 
 .hide-menu{
@@ -90,13 +140,13 @@ header a{
 
 #customized_button{
 	padding: 10px;
-	background-color: #ccc;
+	background-color: #e9e9e9;
 	font-family: 'Mina', 'Arial';
 	transition: 0.3s;
 }
 
 #customized_button:hover{
-	background-color: #e9e9e9;
+	color: #777;
 	cursor: pointer;
 }
 
@@ -121,7 +171,6 @@ header a{
 #learning_map{
 	width: 100%;
 	height: 100%;
-	opacity: 0.5;
 }
 
 /**** Clavier ****/
@@ -133,23 +182,23 @@ header a{
 }
 #ClavierPiano ul {
 	height:16em; 
-	width:14em;
+	width:12.5%;
 	margin:0 0 0 0; 
 	padding:0 0 0 0; 
 	position:relative;
-    display: flex;
-	}
+	display: flex;
+}
 	
 li { 
-	margin:0 0 0 0;
+	margin:0 0 0 0; 
 	padding:0 0 0 0; 
 	list-style:none;
 	position:relative; 
-	background: rgb(255, 255, 255);
+	background: rgb(255, 255, 255)
 }
 
 ul .white {
-	height:11em; width:1.9em; z-index:1;
+	height:12em; width:16%; z-index:1;
 	border-left:1px solid #bbb;
 	border-bottom:1px solid #bbb;
 	border-radius:0 0 5px 5px;
@@ -158,42 +207,61 @@ ul .white {
 }
 
 ul .white:active {
+	border-top:1px solid #777;
+	border-left:1px solid #999;
+	border-bottom:1px solid #999;
 	box-shadow:2px 0 3px rgba(0,0,0,0.1) inset, -5px 5px 20px rgba(0,0,0,0.2) inset,0 0 3px rgba(0,0,0,0.2);
-	background: linear-gradient(top, #fff 0%,#e9e9e9 100%);
+	/*background: linear-gradient(top, #fff 0%,#e9e9e9 100%);*/
+	background-color: #e72121;
 }
 
 ul .black {
-	height:7em; width:1em; 
-	margin:0 0 0 -1em; 
-	z-index:2;
-	border:1px solid #000;
-	border-radius:0 0 3px 3px;
-	box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset, 0 -5px 2px 3px rgba(0,0,0,0.6) inset, 0 2px 4px rgba(0,0,0,0.5);
-	background:linear-gradient(45deg, #222 0%,#555 100%);
+	position: absolute;
+  height:7em; width:10%; 
+  z-index:2;
+  border:1px solid #000;
+  border-radius:0 0 3px 3px;
+  box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset, 0 -5px 2px 3px rgba(0,0,0,0.6) inset, 0 2px 4px rgba(0,0,0,0.5);
+  background:linear-gradient(45deg, #222 0%,#555 100%);
 }
 
 .black:active {
 	box-shadow:-1px -1px 2px rgba(255,255,255,0.2) inset, 0 -2px 2px 3px rgba(0,0,0,0.6) inset, 0 1px 2px rgba(0,0,0,0.5);
-	background:linear-gradient(left, #444 0%,#222 100%);
+	/*background:linear-gradient(left, #444 0%,#222 100%);*/
+	background-color: #e72121;
 }
 
-.a,.g,.d,.c,.e,.f,.b { margin:0 0 0 -0.5em;  }
+.cs{
+	margin-left: 9.8%;
+  }
+  .ds{
+	margin-left: 24%;
+  }
+  .fs{
+	margin-left: 52%;
+  }
+  .gs{
+	margin-left: 66.5%;
+  }
+  .as{
+	margin-left: 81%;
+  }
 
-ul li:first-child { border-radius:5px 0 5px 5px; }
-ul li:last-child { border-radius:0 5px 5px 5px; }
+ul li:first-child { border-radius:0 0 5px 5px; }
+ul li:last-child { border-radius:0 0 5px 5px; }
 
 /**** Footer: credits + contacts ****/
 
 footer{
 	padding: 1% 0 1% 15%;
-	background-color: #000;
+	background-color: #222;
 	color: #999;
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	font-size: 16px;
 }
 
 footer li{
-	background: #000;
+	background-color: #222;
 }
 footer a{
 	color: #999;

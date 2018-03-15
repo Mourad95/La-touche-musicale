@@ -4,6 +4,18 @@ $(document).ready(function(){
         $(".menu_burger").toggleClass("isOpen");
     });
 
+    $(".burger_menu_logo").click(function(){
+        $(".MapMidi").toggleClass("isOpen");
+    });
+
+    $(".burger_menu_logo").click(function(){
+        $(".ClavierPiano").toggleClass("isOpen");
+    });
+
+    $(".burger_menu_logo").click(function(){
+        $(".pre_menu").toggleClass("isOpen");
+    });
+
     $("#button_import").on("change", function(e){
         var files = $(this)[0].files;
 

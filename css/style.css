@@ -1,11 +1,30 @@
 * { box-sizing:border-box; padding: 0; }
 
-/* Creuser la question des ::after ::before */
 /**** General ****/
 
 body{
 	margin:0;
 	background-color: #e9e9e9;
+	font-size: 16px;
+	font-family: 'MINA', 'Arial';
+}
+
+@media screen and (max-width: 64em) {
+	body {
+		 font-size: 90%;
+	  }
+}
+   
+@media screen and (max-width: 50em) {
+	body {
+		  font-size: 75%;
+	  }
+}
+   
+@media screen and (max-width: 30em) {
+	  body {
+		   font-size: 50%;
+	 }
 }
 
 a{
@@ -16,12 +35,9 @@ a{
 
 header{
 	position: relative;
-	padding: 1% 0% 1% 3%;
 	background-color: #e9e9e9;
 	color: #999;
-	font-family: 'MINA', 'Arial';
-	font-size: 16px;
-	height: 200px;
+	height: 10%;
 	display: flex; /* Pour aligner le logo, 'Mon compte' et le burger menu */
 }
 
@@ -37,6 +53,7 @@ header a{
 	left: 5%;
 	top: 10%;
 }
+
 #logo a {
 	cursor: pointer;
 }
@@ -53,28 +70,67 @@ header a{
 	width: 15%;
 	right: 10%;
 	top: 18%;
+	text-justify: right;
+	transition: transform .6s ease-in-out;
+	--webkit-transition: transform .6s ease-in-out;
 }
 
-
+#pre_menu.isOpen {
+	transform: translateX(-70%);
+	--webkit-transform: translateX(-70%);
+}
 
 #pre_menu ul{
 	display: flex;
 }
 
 #pre_menu ul li{
-	background-color: #e9e9e9;
-	margin-right: 15%;
+	background-color: #e9e9e9;;
+}
+
+#pre_menu ul li:first-child {
+	right: 20%;
 }
 
 #pre_menu a:hover{
 	color: #555;
 }
 
+	/**** File import ****/
+
+#div_import{
+	margin: 5% 5% 5% 43%;
+	height: 50%;
+	width: 50%;
+}
+
+#customized_button{
+	background-color: #e9e9e9;
+	transition: 0.3s;
+}
+
+#customized_button:hover{
+	color: #777;
+	cursor: pointer;
+}
+
+#button_import{
+	display: none;
+}
+
+#customized_button a{
+	color: #444;
+}
+
+.fas{
+	width: 100%;
+}
+
     /**** Burger menu ****/
 
 .menu_burger{
 	position: fixed;
-	margin-top: -1%;
+	margin-top: 0%;
 	right: 0;
 	width: 20%;
 	height: 100%;
@@ -110,6 +166,7 @@ header a{
 
 #burger_menu_logo{
 	margin: -1% 0 0 0;
+	margin-top: 18%;
 }
 
 .burger_menu_logo.angle{
@@ -131,42 +188,13 @@ header a{
 	display: none;
 }
 
+/**** Loading button ****/
+
 /**** SECTION 1 ****/
-/**** File import ****/
-
-#div_import{
-	margin: 5% 0 5% 43%;
-	height: 50%;
-	width: 50%;
-}
-
-#customized_button{
-	padding: 10px;
-	background-color: #e9e9e9;
-	font-family: 'Mina', 'Arial';
-	transition: 0.3s;
-}
-
-#customized_button:hover{
-	color: #777;
-	cursor: pointer;
-}
-
-#button_import{
-	display: none;
-}
-
-#customized_button a{
-	color: #444;
-}
-
-.fas{
-	margin-right: 9%;
-}
-
 /**** MapMidi ****/
 
 #MapMidi{
+	margin-top: -5%;
 	height: 30%;
 }
 
@@ -187,6 +215,7 @@ header a{
 	height: 100%;
 }
 
+/**** Section 2 ****/
 /**** Clavier ****/
 
 #ClavierPiano{
@@ -280,20 +309,23 @@ ul li:last-child { border-radius:0 0 5px 5px; }
 /**** Footer: credits + contacts ****/
 
 footer{
-	padding: 1% 0 1% 15%;
+	padding: 1% 0 1% 5%;
 	background-color: #222;
 	color: #999;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	font-size: 16px;
 }
 
 footer li{
 	background-color: #222;
 }
+
 footer a{
 	color: #999;
 }
 
 footer a:hover{
 	color: #777;
+}
+
+footer li:last-child {
+	margin-top: 2%;
 }

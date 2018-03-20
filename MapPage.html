@@ -21,15 +21,38 @@
             <ul>
                 <li>
                     <form>
-                        <label for="button_import" id="customized_button">
+                        <label for="button_import" class="customized_button">
                             <i class="fas fa-upload"></i>
                             <span id="label_span"></span>
                         </label>
                         <input id="button_import" type="file" multiple="false" value="submit"/>
                     </form>
                 </li>
-                <li><a href="#">My account</a></li>
+                <li>
+                    <form>
+                        <label for="button_account" class="customized_button">
+                            <i class="fas fa-user-circle"></i>
+                            <span id="label_span"></span>
+                        </label>
+                        <input id="button_account" type="password" value="submit"/>
+                    </form>
+                </li>
             </ul>
+        </div>
+        <div id="login-wrapper">
+            <form class="login">
+                <div class="img-container">
+                    <img class="login-icon" alt="Sign in" src="./img/login-icon.png"/>
+                    <h3>Log in</h3>
+                </div>
+                <div class="login-container">
+                    <input type="text" placeholder="Enter Username" name="uname" />
+                    <input type="password" placeholder="Enter Password" name="psw" />
+                    <button type="submit">Login</button>
+                    <input type="checkbox">Remember me</input>
+                    <span><a href="#">Forgot Password?</a></span>
+                </div>
+            </form>
         </div>
         <div id="burger_menu_logo" class="burger_menu_logo">
             <a href="#"><img src="img/menu.png" /></a>
@@ -63,7 +86,15 @@
             </form>
         </div> -->
         <div><!-- defilment MIDI JS-->
-            <video id="learning_map" autoplay loop>
+            <div id="start" onload="">
+                <div class="dark_background">
+                    <span class="start_msg">Tell us when you're...</span>
+                    <button class="start" value="Ready" href="#" onclick="disappear()">
+                        <a class="action" href="#">Ready!</a>
+                    </button>
+                </div>
+            </div>
+            <video id="learning_map" class="pause" loop>
                 <source src="img/stock-footage-red-blue-neon-animated-vj-background.mp4" type="video/mp4">
             </video>
         </div>
@@ -193,5 +224,7 @@
         </ul>
     </footer>
     <script src="./js/features.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/midiscript.js"></script>
 </body>
 </html>

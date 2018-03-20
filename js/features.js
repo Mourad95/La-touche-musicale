@@ -25,6 +25,8 @@ $(document).ready(function(){
         }*/
 
         if(files){
+            //window.location.reload();
+            window.location = "loading.html";
         }
     });
 
